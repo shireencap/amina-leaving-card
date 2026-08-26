@@ -1,16 +1,15 @@
 :root {
-  --paper: #f8fdf6;
-  --paper-edge: #d4e8d0;
-  --board: #1a2e1a;
-  --board-2: #243824;
+  --paper: #fffafc;
+  --paper-edge: #f0d4e0;
+  --board: #2e1a2a;
+  --board-2: #3d2438;
   --ink: #2b2b2b;
-  --muted: #5a7a5a;
-  --accent: #6b9b6b;
-  --matcha: #8fbc8f;
-  --matcha-light: #c8e6c9;
-  --latte: #f5e6d3;
-  --blush: #fce4ec;
-  --note-shadow: rgba(30, 60, 30, 0.15);
+  --muted: #8a5a7a;
+  --accent: #d4729a;
+  --pink: #f8b4d0;
+  --pink-light: #fce4ef;
+  --blush: #fff0f5;
+  --note-shadow: rgba(60, 20, 40, 0.12);
 }
 
 * { box-sizing: border-box; }
@@ -25,9 +24,9 @@ body {
   font-family: "Segoe UI", Roboto, -apple-system, Helvetica, Arial, sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(ellipse at 15% 10%, rgba(143, 188, 143, 0.3), transparent 50%),
-    radial-gradient(ellipse at 85% 80%, rgba(245, 230, 211, 0.3), transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(252, 228, 236, 0.15), transparent 60%),
+    radial-gradient(ellipse at 15% 10%, rgba(248, 180, 208, 0.25), transparent 50%),
+    radial-gradient(ellipse at 85% 80%, rgba(252, 228, 239, 0.3), transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(212, 114, 154, 0.1), transparent 60%),
     linear-gradient(135deg, var(--board), var(--board-2));
   background-attachment: fixed;
   padding: clamp(16px, 4vw, 48px);
@@ -45,7 +44,7 @@ body {
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
     0 30px 80px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(143, 188, 143, 0.2);
+    0 0 0 1px rgba(248, 180, 208, 0.3);
   overflow: hidden;
   position: relative;
 }
@@ -56,11 +55,10 @@ body {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% -10%, rgba(143, 188, 143, 0.08), transparent 50%);
+    radial-gradient(circle at 50% -10%, rgba(248, 180, 208, 0.1), transparent 50%);
   z-index: 2;
 }
 
-/* Sticker decorations */
 .card__stickers {
   position: absolute;
   inset: 0;
@@ -86,8 +84,8 @@ body {
 .card__header {
   text-align: center;
   padding: clamp(28px, 5vw, 52px) 24px 16px;
-  border-bottom: 2px dashed var(--matcha-light);
-  background: linear-gradient(180deg, #f0faf0, var(--paper));
+  border-bottom: 2px dashed var(--pink-light);
+  background: linear-gradient(180deg, #fff5fa, var(--paper));
   position: relative;
 }
 
@@ -106,8 +104,8 @@ body {
   font-size: clamp(2.8rem, 9vw, 5rem);
   font-weight: 700;
   line-height: 1.05;
-  color: #2d5a3d;
-  text-shadow: 0 2px 8px rgba(45, 90, 61, 0.1);
+  color: #a83279;
+  text-shadow: 0 2px 8px rgba(168, 50, 121, 0.1);
 }
 
 .card__subtitle {
@@ -136,7 +134,7 @@ body {
 
 .notes::-webkit-scrollbar { width: 10px; }
 .notes::-webkit-scrollbar-thumb {
-  background: var(--matcha-light);
+  background: var(--pink-light);
   border-radius: 999px;
   border: 3px solid var(--paper);
 }
@@ -151,7 +149,7 @@ body {
   position: relative;
   background: var(--note-bg, #fff);
   border-radius: 8px;
-  border: 1px solid rgba(143, 188, 143, 0.15);
+  border: 1px solid rgba(248, 180, 208, 0.2);
   box-shadow: 0 6px 20px var(--note-shadow);
   transform: rotate(var(--rotate, 0deg));
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -170,7 +168,7 @@ body {
   width: 80px;
   height: 22px;
   transform: translateX(-50%) rotate(var(--tape-rotate, -3deg));
-  background: rgba(200, 230, 201, 0.6);
+  background: rgba(252, 228, 239, 0.7);
   border-left: 1px dashed rgba(0, 0, 0, 0.06);
   border-right: 1px dashed rgba(0, 0, 0, 0.06);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
@@ -213,8 +211,8 @@ body {
 .card__footer {
   padding: 18px 24px 24px;
   text-align: center;
-  border-top: 2px dashed var(--matcha-light);
-  background: linear-gradient(0deg, #f0faf0, var(--paper));
+  border-top: 2px dashed var(--pink-light);
+  background: linear-gradient(0deg, #fff5fa, var(--paper));
   font-size: 0.9rem;
   color: var(--muted);
 }
@@ -222,11 +220,11 @@ body {
 .card__footer p { margin: 4px 0; }
 
 .card__hint code {
-  background: #e8f5e9;
+  background: #fce4ef;
   padding: 1px 5px;
   border-radius: 4px;
   font-size: 0.82em;
-  color: #2d5a3d;
+  color: #a83279;
 }
 
 .notes__empty {

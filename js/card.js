@@ -1,10 +1,3 @@
-/*
- * Renders the leaving card from window.CARD_CONFIG and window.SIGNATURES.
- *
- * Styling for each note is either taken from the signature's optional fields or
- * derived deterministically from the signer's name, so every signature gets a
- * consistent-but-varied "hand signed" look without anyone having to choose.
- */
 (function () {
   "use strict";
 
@@ -25,29 +18,27 @@
     "Just Another Hand",
   ];
 
-  // Sage/matcha-adjacent ink palette
   var SIGNATURE_COLOURS = [
-    "#2d5a3d",
-    "#3d7b5c",
+    "#a83279",
+    "#6b3d7a",
+    "#3d5a8a",
+    "#7a3d5a",
     "#5a3d6b",
-    "#1a4a6b",
-    "#6b5a3d",
-    "#2c5f2d",
-    "#7a4a5b",
-    "#3d6b6b",
-    "#4a6b3d",
-    "#5b4a7a",
+    "#8a3d5a",
+    "#3d6b7a",
+    "#6b5a7a",
+    "#9a3166",
+    "#4a5a8a",
   ];
 
-  // Soft tints matching the matcha/blush/latte palette
   var NOTE_BACKGROUNDS = [
     "#ffffff",
-    "#f8fdf6",
-    "#fef9f3",
-    "#f3faf3",
-    "#f9f3fd",
-    "#fdf6f8",
-    "#f3f8fd",
+    "#fff8fb",
+    "#fef5f9",
+    "#fdf8ff",
+    "#fff5f8",
+    "#faf5ff",
+    "#fff9fc",
   ];
 
   function hash(str) {
@@ -152,7 +143,7 @@
     var config = window.CARD_CONFIG || {};
     var signatures = Array.isArray(window.SIGNATURES) ? window.SIGNATURES : [];
 
-    setText("card-title", config.recipient ? "Farewell " + config.recipient + " 💚" : "Farewell");
+    setText("card-title", config.recipient ? "Farewell " + config.recipient + " 💕" : "Farewell");
     setText("card-subtitle", config.subtitle || "");
     setText("card-footer-text", config.footer || "");
     document.title = config.recipient
@@ -172,7 +163,7 @@
     if (count === 0) {
       var empty = document.createElement("p");
       empty.className = "notes__empty";
-      empty.textContent = "Be the first to sign 🍵✨";
+      empty.textContent = "Be the first to sign 🍵💕";
       container.appendChild(empty);
       return;
     }
