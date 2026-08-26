@@ -25,4 +25,11 @@ window.SIGNATURES = [
     font: "Caveat",
     colour: "#a83279",
   },
+  {
+    name: "Maty",
+    message: "Dear Amina,\nI have really enjoyed working with you on the Matalan project, I know that Network Rail is getting a really capable DevOps Engineer, even when Dan was away you helped Shireen and I and you basically ran the team and it was like Dan never left (Dont tell him I said that).\nI wish you the best and I hope you enjoy working at Network Rail!!\n- Maty \u2764\uFE0F",
+    role: "Platform team",
+    font: "Caveat",
+    colour: "#a83279",
+  },
 ];
