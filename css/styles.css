@@ -1,0 +1,262 @@
+:root {
+  --paper: #f8fdf6;
+  --paper-edge: #d4e8d0;
+  --board: #1a2e1a;
+  --board-2: #243824;
+  --ink: #2b2b2b;
+  --muted: #5a7a5a;
+  --accent: #6b9b6b;
+  --matcha: #8fbc8f;
+  --matcha-light: #c8e6c9;
+  --latte: #f5e6d3;
+  --blush: #fce4ec;
+  --note-shadow: rgba(30, 60, 30, 0.15);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, -apple-system, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(143, 188, 143, 0.3), transparent 50%),
+    radial-gradient(ellipse at 85% 80%, rgba(245, 230, 211, 0.3), transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(252, 228, 236, 0.15), transparent 60%),
+    linear-gradient(135deg, var(--board), var(--board-2));
+  background-attachment: fixed;
+  padding: clamp(16px, 4vw, 48px);
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: min(1000px, 100%);
+  max-height: calc(100vh - clamp(32px, 8vw, 96px));
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border-radius: 20px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(143, 188, 143, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(143, 188, 143, 0.08), transparent 50%);
+  z-index: 2;
+}
+
+/* Sticker decorations */
+.card__stickers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.sticker {
+  position: absolute;
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+  transform: rotate(var(--sticker-rotate, 0deg));
+  animation: float 6s ease-in-out infinite;
+  animation-delay: var(--sticker-delay, 0s);
+}
+
+@keyframes float {
+  0%, 100% { transform: rotate(var(--sticker-rotate, 0deg)) translateY(0px); }
+  50% { transform: rotate(var(--sticker-rotate, 0deg)) translateY(-4px); }
+}
+
+.card__header {
+  text-align: center;
+  padding: clamp(28px, 5vw, 52px) 24px 16px;
+  border-bottom: 2px dashed var(--matcha-light);
+  background: linear-gradient(180deg, #f0faf0, var(--paper));
+  position: relative;
+}
+
+.card__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.36em;
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.card__title {
+  margin: 8px 0 6px;
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(2.8rem, 9vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #2d5a3d;
+  text-shadow: 0 2px 8px rgba(45, 90, 61, 0.1);
+}
+
+.card__subtitle {
+  margin: 0;
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.card__count {
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.notes {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: clamp(18px, 4vw, 36px);
+  column-gap: 20px;
+  columns: 3 240px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.notes::-webkit-scrollbar { width: 10px; }
+.notes::-webkit-scrollbar-thumb {
+  background: var(--matcha-light);
+  border-radius: 999px;
+  border: 3px solid var(--paper);
+}
+
+.note {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 20px 20px 16px;
+  position: relative;
+  background: var(--note-bg, #fff);
+  border-radius: 8px;
+  border: 1px solid rgba(143, 188, 143, 0.15);
+  box-shadow: 0 6px 20px var(--note-shadow);
+  transform: rotate(var(--rotate, 0deg));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 0 14px 32px var(--note-shadow);
+  z-index: 3;
+}
+
+.note__tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 80px;
+  height: 22px;
+  transform: translateX(-50%) rotate(var(--tape-rotate, -3deg));
+  background: rgba(200, 230, 201, 0.6);
+  border-left: 1px dashed rgba(0, 0, 0, 0.06);
+  border-right: 1px dashed rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+}
+
+.note__message {
+  margin: 6px 0 14px;
+  font-family: var(--note-font, "Caveat"), cursive;
+  font-size: var(--note-size, 1.5rem);
+  line-height: 1.35;
+  color: var(--note-ink, #1b1b1b);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.note__sign {
+  display: block;
+  text-align: right;
+  font-family: var(--note-font, "Caveat"), cursive;
+  font-size: calc(var(--note-size, 1.5rem) * 1.05);
+  color: var(--note-ink, #1b1b1b);
+}
+
+.note__sign::before {
+  content: "\2014 ";
+  opacity: 0.6;
+}
+
+.note__role {
+  display: block;
+  text-align: right;
+  margin-top: 2px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.card__footer {
+  padding: 18px 24px 24px;
+  text-align: center;
+  border-top: 2px dashed var(--matcha-light);
+  background: linear-gradient(0deg, #f0faf0, var(--paper));
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.card__footer p { margin: 4px 0; }
+
+.card__hint code {
+  background: #e8f5e9;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.82em;
+  color: #2d5a3d;
+}
+
+.notes__empty {
+  text-align: center;
+  color: var(--accent);
+  font-family: "Dancing Script", cursive;
+  font-size: 1.8rem;
+  column-span: all;
+  padding: 40px 0;
+}
+
+/* Sticker positioning */
+.sticker--matcha { top: 12px; right: 20px; --sticker-rotate: 8deg; --sticker-delay: 0s; }
+.sticker--coffee { top: 18px; left: 16px; --sticker-rotate: -12deg; --sticker-delay: 1s; }
+.sticker--sparkle { top: 50%; right: 12px; --sticker-rotate: 5deg; --sticker-delay: 2s; font-size: 1.6rem; }
+.sticker--heart { bottom: 60px; left: 14px; --sticker-rotate: -6deg; --sticker-delay: 0.5s; }
+.sticker--plant { bottom: 58px; right: 18px; --sticker-rotate: 10deg; --sticker-delay: 3s; }
+.sticker--cloud { top: 35%; left: 10px; --sticker-rotate: -4deg; --sticker-delay: 1.5s; font-size: 1.5rem; }
+.sticker--ai { top: 65%; right: 14px; --sticker-rotate: 6deg; --sticker-delay: 2.5s; }
+.sticker--croissant { bottom: 120px; left: 18px; --sticker-rotate: 12deg; --sticker-delay: 4s; font-size: 1.8rem; }
+.sticker--laptop { top: 28%; right: 16px; --sticker-rotate: -8deg; --sticker-delay: 3.5s; font-size: 1.4rem; }
+.sticker--star { bottom: 130px; right: 20px; --sticker-rotate: 15deg; --sticker-delay: 0.8s; font-size: 1.5rem; }
+
+@media (max-width: 540px) {
+  .card { max-height: none; border-radius: 16px; }
+  .notes { columns: 1; overflow: visible; }
+  .sticker { font-size: 1.4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .note, .note:hover { transition: none; transform: none; }
+  .sticker { animation: none; }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaving Card — Amina</title>
+
+  <!-- Handwriting fonts for the signatures -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Gloria+Hallelujah&family=Gochi+Hand&family=Indie+Flower&family=Just+Another+Hand&family=Kalam:wght@300;400;700&family=Nanum+Pen+Script&family=Patrick+Hand&family=Permanent+Marker&family=Reenie+Beanie&family=Satisfy&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="card" aria-labelledby="card-title">
+    <!-- Sticker decorations -->
+    <div class="card__stickers" aria-hidden="true">
+      <span class="sticker sticker--matcha">🍵</span>
+      <span class="sticker sticker--coffee">☕</span>
+      <span class="sticker sticker--sparkle">✨</span>
+      <span class="sticker sticker--heart">💚</span>
+      <span class="sticker sticker--plant">🌿</span>
+      <span class="sticker sticker--cloud">☁️</span>
+      <span class="sticker sticker--ai">🤖</span>
+      <span class="sticker sticker--croissant">🥐</span>
+      <span class="sticker sticker--laptop">💻</span>
+      <span class="sticker sticker--star">⭐</span>
+    </div>
+
+    <header class="card__header">
+      <p class="card__eyebrow" id="card-eyebrow">with all our love</p>
+      <h1 class="card__title" id="card-title">Farewell</h1>
+      <p class="card__subtitle" id="card-subtitle"></p>
+      <p class="card__count" id="card-count" aria-live="polite"></p>
+    </header>
+
+    <section class="notes" id="notes" aria-label="Messages from the team">
+      <!-- Signatures are rendered here by js/card.js -->
+    </section>
+
+    <footer class="card__footer">
+      <p id="card-footer-text"></p>
+      <p class="card__hint">
+        Want to sign? Open a pull request that adds your message to
+        <code>js/signatures.js</code> &mdash; see <code>SIGNING.md</code>.
+      </p>
+    </footer>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/signatures.js"></script>
+  <script src="js/card.js"></script>
+</body>
+</html>
