@@ -18,4 +18,11 @@
  * wonky, varied and individual.
  */
 window.SIGNATURES = [
+  {
+    name: "Shireen",
+    message: "Dear Amina,\nIts such a bittersweet moment for me to see you moving on. I have thoroughly enjoyed my time at Matalan and you have been a huge part of that experience for me. I have loved working with you, you are so smart, capable and so much more and i know these are qualities your future employer would truly value too.\nI wish you all the best in your new role and i know you will be at the forefront of the teams success and be one of the most valuable platform engineers National Railway could ask for!!\nI will misss youu and 'Matalan Crew' will never be the same again but its time for me to let you go. \nFrom yours truly, Shireen.\n#ShAminaForever \u2764\uFE0F",
+    role: "Platform team",
+    font: "Dancing Script",
+    colour: "#a83279",
+  },
 ];
