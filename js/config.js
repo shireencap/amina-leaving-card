@@ -7,6 +7,6 @@
  */
 window.CARD_CONFIG = {
   recipient: "Amina",
-  subtitle: "Platform Engineer · AI Visionary",
+  subtitle: "Platform Engineer · AI Visionary · Matalan Ignite",
   footer: "You built this platform with brilliance & vibes — we'll miss you endlessly 💕",
 };
