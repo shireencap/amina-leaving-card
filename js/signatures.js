@@ -25,4 +25,12 @@ window.SIGNATURES = [
     font: "Caveat",
     colour: "#a83279",
   },
+  {
+    name: "Martin",
+    message: "Awesome working with you Amina, always so impressed with your DevOps and Platform skills and ability to tackle complex problems so quickly with agentic AI. You will be missed on the team, but excited for you to be taking the next step in your career. Good luck and all the best in the future!",
+    font: "Permanent Marker",
+    colour: "#0f766e",
+    rotate: -3,
+    size: 1.7,
+  },
 ];
