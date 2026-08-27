@@ -58,4 +58,12 @@ window.SIGNATURES = [
     rotate: 2,
     size: 1.3,
   },
+  {
+    name: "Tahmid",
+    message: "Amina, although we have not worked together closely, it is clear how much you have contributed to the team and the wider platform. Your work has had a real impact on the services we rely on, including SCP, and your ability to bring AI into solving complex problems has been genuinely impressive.\n\nYou have been a great member of the team and will be missed. Wishing you every success at Network Rail and in whatever comes next!",
+    font: "Kalam",
+    colour: "#0f766e",
+    rotate: 2,
+    size: 1.65,
+  },
 ];
