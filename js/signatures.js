@@ -49,4 +49,12 @@ window.SIGNATURES = [
     message: "It has been a genuine pleasure working with you. Thank you so much for all the brilliant work you've done on this project \u2014 your talent and dedication have made a real difference. Wishing you all the very best in your next chapter; I've no doubt you'll be a huge success wherever you go.\nAll the best",
     colour: "#40407a",
   },
+  {
+    name: "Tahmid",
+    message: "Amina, although we have not worked together closely, it is clear how much you have contributed to the team and the wider platform. Your work has had a real impact on the services we rely on, including SCP, and your ability to bring AI into solving complex problems has been genuinely impressive.\n\nYou have been a great member of the team and will be missed. Wishing you every success at Network Rail and in whatever comes next!",
+    font: "Kalam",
+    colour: "#0f766e",
+    rotate: 2,
+    size: 1.65,
+  },
 ];
