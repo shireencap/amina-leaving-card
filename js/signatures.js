@@ -49,4 +49,13 @@ window.SIGNATURES = [
     message: "It has been a genuine pleasure working with you. Thank you so much for all the brilliant work you've done on this project \u2014 your talent and dedication have made a real difference. Wishing you all the very best in your next chapter; I've no doubt you'll be a huge success wherever you go.\nAll the best",
     colour: "#40407a",
   },
+  {
+    name: "Dan Roszkowski",
+    message: "*** SEV-1 INCIDENT REPORT \u2014 P1 \u2014 DO NOT ACKNOWLEDGE, IT WON'T HELP ***\n\nSUMMARY: Production has lost its most load-bearing component. No redundancy was configured. The on-call rota is now purely decorative.\n\nIMPACT: 100% of \"just ask Amina\" requests are failing. Shireen is inconsolable. Maty has begun writing things in leaving cards \u2014 yes Maty, I read it, I've put 30 minutes in your diary.\n\nROOT CAUSE: Network Rail ran a terraform import against our best engineer and we did not have prevent_destroy set. That one's on me. I'm taking the action.\n\nMITIGATION ATTEMPTED: Scaled Dan horizontally. Unsuccessful. Dan does not scale.\n\nRESOLUTION: None available. This one does not roll back.\n\nACTION ITEMS:\n1. Amina to go and be unreasonably good at Network Rail. Owner: Amina. Due: immediately. Status: inevitable.\n2. Team to accept that the trains will now, irritatingly, run on time.\n3. Dan to stop filing incident reports about his feelings.\n\nPOST-INCIDENT NOTE: You made the hard stuff look easy AND made the team feel easy. Almost nobody does both. It was a genuine privilege \u2014 go and break things brilliantly over there, and page us occasionally.\n\nClosed as: WON'T FIX. Wouldn't want to.",
+    role: "Incident Commander \u00b7 Matalan Ignite",
+    font: "Architects Daughter",
+    colour: "#c1121f",
+    rotate: 2,
+    size: 1.3,
+  },
 ];
