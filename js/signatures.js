@@ -26,6 +26,21 @@ window.SIGNATURES = [
     colour: "#a83279",
   },
   {
+    name: "Martin",
+    message: "Awesome working with you Amina, always so impressed with your DevOps and Platform skills and ability to tackle complex problems so quickly with agentic AI. You will be missed on the team, but excited for you to be taking the next step in your career. Good luck and all the best in the future!",
+    font: "Permanent Marker",
+    colour: "#0f766e",
+    rotate: -3,
+    size: 1.7,
+  },
+  {
+    name: "Maty",
+    message: "Dear Amina,\nI have really enjoyed working with you on the Matalan project, I know that Network Rail is getting a really capable DevOps Engineer, even when Dan was away you helped Shireen and I and you basically ran the team and it was like Dan never left (Dont tell him I said that).\nI wish you the best and I hope you enjoy working at Network Rail!!\n- Maty \u2764\uFE0F",
+    role: "Platform team",
+    font: "Caveat",
+    colour: "#a83279",
+  },
+  {
     name: "Gita xx",
     message: "Amina, It has been a great pleasure working with you. Wishing you the very best in your future endeavors.",
   },
