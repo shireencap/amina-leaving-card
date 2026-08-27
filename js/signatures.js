@@ -44,4 +44,9 @@ window.SIGNATURES = [
     name: "Gita xx",
     message: "Amina, It has been a great pleasure working with you. Wishing you the very best in your future endeavors.",
   },
+  {
+    name: "Afshin",
+    message: "It has been a genuine pleasure working with you. Thank you so much for all the brilliant work you've done on this project \u2014 your talent and dedication have made a real difference. Wishing you all the very best in your next chapter; I've no doubt you'll be a huge success wherever you go.\nAll the best",
+    colour: "#40407a",
+  },
 ];
