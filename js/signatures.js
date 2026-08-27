@@ -66,4 +66,8 @@ window.SIGNATURES = [
     rotate: 2,
     size: 1.65,
   },
+  {
+    name: "Krishnan",
+    message: "Wishing you all the very best in your next chapter. Although we didn't get many opportunities to work together closely, it was great being part of the same team. Thank you for your contributions and support. Wishing you success, happiness, and all the best for the future!",
+  },
 ];
