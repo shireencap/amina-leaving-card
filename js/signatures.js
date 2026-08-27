@@ -33,4 +33,8 @@ window.SIGNATURES = [
     rotate: -3,
     size: 1.7,
   },
+  {
+    name: "Gita xx",
+    message: "Amina, It has been a great pleasure working with you. Wishing you the very best in your future endeavors.",
+  },
 ];
