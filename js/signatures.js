@@ -74,4 +74,8 @@ window.SIGNATURES = [
     name: "Shadab",
     message: "Everyone in the project could see how much you grew over the course of the year in terms of handling the responsibilities and standing in for Dan whenever needed. Your contribution to the project was significant and I wish you the best for whatever comes in future !!!",
   },
+  {
+    name: "Duncan",
+    message: "Amina,\nIt's been a pleasure working with you. You, and the other E&ET team members, have been a genuine inspiration throughout the programme. The Friday playback sessions were always a highlight, bringing energy, positivity and a tangible demonstration of what could be achieved.\nBeyond the delivery itself, you've helped prove a new and highly effective approach to developing junior talent in the AI era. Creating a model where people can learn quickly, contribute meaningfully and deliver real outcomes is a fantastic achievement.\nYour Platform Build presentations, both internally and with the client, were exceptional. The quality of the content, confidence of the delivery and clear ownership of the subject matter reflected the significant contribution you've made to the programme.\nThank you for everything you've contributed. You should be incredibly proud of what you've helped create: a best-in-class platform for Matalan, and a practical example of how AI can transform the way engineering teams work and deliver. I have no doubt you'll continue to make a positive impact wherever your career takes you.\nAll the very best,\nDuncan",
+  },
 ];
