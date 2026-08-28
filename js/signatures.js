@@ -49,4 +49,8 @@ window.SIGNATURES = [
     message: "It has been a genuine pleasure working with you. Thank you so much for all the brilliant work you've done on this project \u2014 your talent and dedication have made a real difference. Wishing you all the very best in your next chapter; I've no doubt you'll be a huge success wherever you go.\nAll the best",
     colour: "#40407a",
   },
+  {
+    name: "Elamin",
+    message: "Dear Amina,\nIt's been great working with you. You've been a wonderful team member, and your contributions to the project and the platform have made a real difference. Thank you for all your hard work and dedication.\nWishing you all the best and every success in your new role!\nElamin",
+  },
 ];
